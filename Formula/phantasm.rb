@@ -1,26 +1,26 @@
 class Phantasm < Formula
   desc "Project-scoped memory runtime for AI coding agents"
   homepage "https://github.com/indefiniteloop/phantasm-dist"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/indefiniteloop/phantasm-dist/releases/download/v0.1.2/phantasm-0.1.2-macos-aarch64.tar.gz"
-      sha256 "826059835b7ba7987e2231e8d7ad6838f623f52ce78db6818041eab26094a4a7"
+      url "https://github.com/indefiniteloop/phantasm-dist/releases/download/v0.1.3/phantasm-0.1.3-macos-aarch64.tar.gz"
+      sha256 "9a6cdabfe85e93a3c7f7678a187cbfb5088c3d941708ee6b0d2f9df8a4abe798"
     else
-      url "https://github.com/indefiniteloop/phantasm-dist/releases/download/v0.1.2/phantasm-0.1.2-macos-x86_64.tar.gz"
-      sha256 "7b321b1627d2b89598f0d9a4d99357f6a8c7eb6091f9dc1a7b3c539f43de813f"
+      url "https://github.com/indefiniteloop/phantasm-dist/releases/download/v0.1.3/phantasm-0.1.3-macos-x86_64.tar.gz"
+      sha256 "dccfc3f988583394176e88405a7a2f967e1dee955c5baccaa46d886a5d317fca"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/indefiniteloop/phantasm-dist/releases/download/v0.1.2/phantasm-0.1.2-linux-aarch64.tar.gz"
-      sha256 "582bb91b231833f4d4bc6889ff8239da0497490bb50971ed95f068e924d852d7"
+      url "https://github.com/indefiniteloop/phantasm-dist/releases/download/v0.1.3/phantasm-0.1.3-linux-aarch64.tar.gz"
+      sha256 "0b1628596b8e553953336d1546080e54d995e911b905a53ca7aee45f61e09d53"
     else
-      url "https://github.com/indefiniteloop/phantasm-dist/releases/download/v0.1.2/phantasm-0.1.2-linux-x86_64.tar.gz"
-      sha256 "a09d60ee619aef25bb377f8300d51885a8c68559cf2d1889e74f81ec1961f977"
+      url "https://github.com/indefiniteloop/phantasm-dist/releases/download/v0.1.3/phantasm-0.1.3-linux-x86_64.tar.gz"
+      sha256 "62356c4aafc63af3d19cf290c2a4b50cb7b66c11f3670475d43af38a89fe872b"
     end
   end
 

@@ -1,34 +1,35 @@
 class Phantasm < Formula
   desc "Project-scoped memory runtime for AI coding agents"
   homepage "https://github.com/indefiniteloop/phantasm-dist"
-  version "0.1.7"
+  version "0.1.8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/indefiniteloop/phantasm-dist/releases/download/v0.1.7/phantasm-0.1.7-macos-aarch64.tar.gz"
-      sha256 "68be7d649447b33011f568d1cb60bc34ca142a5b3275f27f5d16aab4f7ab892f"
+      url "https://github.com/indefiniteloop/phantasm-dist/releases/download/v0.1.8/phantasm-0.1.8-macos-aarch64.tar.gz"
+      sha256 "b97846bfe6d3e38928e99e25c74b0e00a855650f604f08f54c814952ab47019d"
     else
-      url "https://github.com/indefiniteloop/phantasm-dist/releases/download/v0.1.7/phantasm-0.1.7-macos-x86_64.tar.gz"
-      sha256 "9852da85d39ed3e00f62f6cccbdfb494c5f950c61a2173d109dd99f2af8b3296"
+      url "https://github.com/indefiniteloop/phantasm-dist/releases/download/v0.1.8/phantasm-0.1.8-macos-x86_64.tar.gz"
+      sha256 "674c14113fb03e7b49f1ff6108a38c9569d241927299a27ad37128f4512cd7bc"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/indefiniteloop/phantasm-dist/releases/download/v0.1.7/phantasm-0.1.7-linux-aarch64.tar.gz"
-      sha256 "508141ccfb034a306269160ff2f9abd9f127697c8251f73a930c68d7c71e1899"
+      url "https://github.com/indefiniteloop/phantasm-dist/releases/download/v0.1.8/phantasm-0.1.8-linux-aarch64.tar.gz"
+      sha256 "46cbcbeb40539176cba5194c09bc470313997cd56a9766f3b8c59fc5ab8e951a"
     else
-      url "https://github.com/indefiniteloop/phantasm-dist/releases/download/v0.1.7/phantasm-0.1.7-linux-x86_64.tar.gz"
-      sha256 "9d1e15c74fe14ad5cf5cd0530f384ad2c822990da7096857bb2d4403e077b0fb"
+      url "https://github.com/indefiniteloop/phantasm-dist/releases/download/v0.1.8/phantasm-0.1.8-linux-x86_64.tar.gz"
+      sha256 "6b534b62896ce750e05f14e08648e533b1e19a478f7e7e29a48e16b263d3937b"
     end
   end
 
   def install
-    bin.install "phantasm"
+    bin.install "phantasm", "phm"
   end
 
   test do
     assert_match version.to_s, shell_output("#{bin}/phantasm --version")
+    assert_match version.to_s, shell_output("#{bin}/phm --version")
   end
 end
